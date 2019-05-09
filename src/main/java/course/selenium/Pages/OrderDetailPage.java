@@ -1,4 +1,4 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -16,10 +16,10 @@ public class OrderDetailPage extends BasePage {
     @FindBy(xpath="//div[contains(@class,'order-notes')]/p")
     WebElement enteredNoteTxt;
 
-    public void submitANote(String inputNote){
-        ele.sendKeys(customerNoteTxt,inputNote,"Note box");
-        ele.click(submitBtn,"Submit button");
-    }
+//    public void submitANote(String inputNote){
+//        ele.sendKeys(customerNoteTxt,inputNote,"Note box");
+//        ele.click(submitBtn,"Submit button");
+//    }
 
     public String getNoteText(){
 

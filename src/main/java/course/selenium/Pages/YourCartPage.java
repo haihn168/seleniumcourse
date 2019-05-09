@@ -1,4 +1,4 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -28,16 +28,16 @@ public class YourCartPage extends BasePage {
            System.out.println(i);
        }
     }
-    public void clickCartBtn(){
-        ele.click(cartBtn,"Cart button");
-    }
-    public void checkOutItems() throws InterruptedException{
-        Thread.sleep(5000);
-        ele.click(cartBtn,"Cart button");
-        ele.click(checkOutBtn,"Checkout button");
-        ele.click(shippingAddrContinueBtn,"Shipping Address Form Continue button");
-        ele.click(shippingMethodContinueBtn,"Shipping method Continue button");
-        Thread.sleep(5000);
-        ele.click(orderPayBtn,"Order & Pay button");
-    }
+//    public void clickCartBtn(){
+//        ele.click(cartBtn,"Cart button");
+//    }
+//    public void checkOutItems() throws InterruptedException{
+//        Thread.sleep(5000);
+//        ele.click(cartBtn,"Cart button");
+//        ele.click(checkOutBtn,"Checkout button");
+//        ele.click(shippingAddrContinueBtn,"Shipping Address Form Continue button");
+//        ele.click(shippingMethodContinueBtn,"Shipping method Continue button");
+//        Thread.sleep(5000);
+//        ele.click(orderPayBtn,"Order & Pay button");
+//    }
 }

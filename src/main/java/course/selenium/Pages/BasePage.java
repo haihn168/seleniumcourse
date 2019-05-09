@@ -1,4 +1,4 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -8,6 +8,5 @@ public class BasePage extends DriverFactory {
     public BasePage(WebDriver driver){
         super(driver);
     }
-    ElementAction ele = new ElementAction();
     WebDriverWait wait = new WebDriverWait(driver,10);
 }

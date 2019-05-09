@@ -5,7 +5,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 public class ElementAction {
-    public static void sendKeys(WebElement ele, CharSequence keys, String eleName){
+    public static void sendKeys(WebElement ele, String keys, String eleName){
         if(ele!=null){
             ele.clear();
 //            System.out.println("Send keys in the " + eleName );

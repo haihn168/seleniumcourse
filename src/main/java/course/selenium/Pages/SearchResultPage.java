@@ -1,11 +1,11 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
-public class NoResultPage extends BasePage {
-    public NoResultPage(WebDriver driver){
+public class SearchResultPage extends BasePage {
+    public SearchResultPage(WebDriver driver){
         super(driver);
     }
     @FindBy(xpath = "//div[contains(@class,'no-results')]//strong")
@@ -17,12 +17,4 @@ public class NoResultPage extends BasePage {
         return resultText;
     }
 
-    public boolean verifySearchPageTitle(WebDriver driver){
-        String title = ele.getPageTitle(driver);
-        if(title.equals("Search results Saleor Demo")) {
-            return true;
-        } else {
-            return false;
-        }
-    }
 }

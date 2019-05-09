@@ -1,5 +1,6 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
+import course.selenium.Ultilities.ElementAction;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -8,6 +9,7 @@ public class Loginpage extends BasePage {
     public Loginpage(WebDriver driver){
         super(driver);
     }
+    String loginPageUrl = "https://demo.getsaleor.com/en/account/login/";
 
     WebDriver driver;
     @FindBy(id = "id_username")
@@ -21,10 +23,15 @@ public class Loginpage extends BasePage {
     @FindBy()
     WebElement registerBtn;
 
-
-    public void login(String username, String password){
-        ele.sendKeys(usernameTxtFld, username, "Username box");
-        ele.sendKeys(paswwordTxtFld, password, "Password box");
-        ele.click(loginBtn, "Login button");
+    public Loginpage navigateToLoginPage(WebDriver driver){
+        driver.get(loginPageUrl);
+        return this;
     }
+    public Homepage loginWithUserPassword(String username, String password){
+        ElementAction.sendKeys(usernameTxtFld, username, "Username field");
+        ElementAction.sendKeys(paswwordTxtFld,password,"Password field");
+        ElementAction.click(loginBtn, "Login button");
+        return new Homepage(driver);
+    }
+
 }

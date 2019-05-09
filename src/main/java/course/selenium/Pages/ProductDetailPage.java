@@ -1,4 +1,4 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
@@ -36,14 +36,14 @@ public class ProductDetailPage extends BasePage{
         return prdName;
     }
 
-    public void enterRandomQuantity(){
-        ele.sendKeys(qtyInput, Keys.BACK_SPACE,"");
-        ele.sendKeys(qtyInput,String.valueOf(qty),"Quantity");
-    }
+//    public void enterRandomQuantity(){
+//        ele.sendKeys(qtyInput, Keys.BACK_SPACE,"");
+//        ele.sendKeys(qtyInput,String.valueOf(qty),"Quantity");
+//    }
 
-    public void addToCart(){
-        ele.click(addToCartBtn,"Add to cart button");
-    }
+//    public void addToCart(){
+//        ele.click(addToCartBtn,"Add to cart button");
+//    }
 
 
 }

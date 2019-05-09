@@ -9,13 +9,13 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
 
 public class BaseTest {
     WebDriver driver;
-
     @Parameters("browser")
     @BeforeClass
     public void beforeEach(String browser) throws MalformedURLException {

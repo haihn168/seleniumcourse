@@ -1,7 +1,7 @@
 package course.selenium.tests.GetSaleor;
 
-import course.selenium.pages.Homepage;
-import course.selenium.pages.NoResultPage;
+import course.selenium.Action.CommonAction;
+import course.selenium.Pages.SearchResultPage;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
@@ -11,11 +11,10 @@ public class SearchProductTest extends BaseTest{
     @Test
     public void searchProductTest() {
         String searchText = "Hello ajinomoto";
-        Homepage homepage = new Homepage(driver);
-        NoResultPage noResultPage = new NoResultPage(driver);
-        homepage.enterSearch(searchText)
-                .clickSearchButton();
-        Assert.assertTrue(noResultPage.verifySearchPageTitle(driver));
-        Assert.assertEquals(noResultPage.getNoResultText(),searchText.toLowerCase());
+        CommonAction commonAction = new CommonAction(driver);
+        SearchResultPage searchResultPage = new SearchResultPage(driver);
+        commonAction.makeASearch(searchText);
+        Assert.assertEquals(commonAction.getPageTitle(driver),"Search results Saleor Demo");
+        Assert.assertEquals(searchResultPage.getNoResultText(),searchText.toLowerCase());
     }
 }

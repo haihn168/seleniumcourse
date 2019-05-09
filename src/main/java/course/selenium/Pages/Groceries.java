@@ -1,4 +1,4 @@
-package course.selenium.pages;
+package course.selenium.Pages;
 
 import java.util.List;
 import java.util.Random;
@@ -19,8 +19,6 @@ public class Groceries extends DriverFactory {
 
     @FindBy(xpath = "//div[contains(@class,'product-list')]//span[normalize-space(@class)='product-list-item-name']")
     List<WebElement> randomGroceriesList;
-    @FindBy(xpath = "//li[contains(@class,'nav-item')]/a[contains(@href,'groceries')]")
-    WebElement groceriesMenu;
 
     public void selectARandomGroceriesProduct(){
         Random rnd = new Random();
@@ -28,7 +26,4 @@ public class Groceries extends DriverFactory {
         ele.click(randomGroceriesList.get(x), "Random Groceries product");
     }
 
-    public void clickGroceriesMenu(){
-        ele.click(groceriesMenu,"Groceries Menu");
-    }
 }
