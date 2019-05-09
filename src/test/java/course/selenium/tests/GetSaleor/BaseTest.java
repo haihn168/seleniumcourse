@@ -9,6 +9,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.safari.SafariDriver;
+import org.testng.annotations.Optional;
 import org.testng.annotations.Parameters;
 
 import java.net.MalformedURLException;
@@ -18,8 +19,10 @@ public class BaseTest {
 
     @Parameters("browser")
     @BeforeClass
-    public void beforeEach(String browser) throws MalformedURLException {
-
+    public void beforeEach(@Optional String browser) throws MalformedURLException {
+        if(browser == null){
+            browser = "chrome";
+        }
         switch (browser) {
             case "chrome":
                 WebDriverManager.chromedriver().setup();
